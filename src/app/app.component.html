@@ -1,0 +1,17 @@
+<div class="row container mt-4">
+  <div class="col-3">
+    <h4>Busquedas</h4>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item" routerLinkActive="active" [routerLink]="['/buscar']">Buscar todos</li>
+      <li class="list-group-item" routerLinkActive="active" [routerLink]="['/buscarpornombre']">Buscar Nombre</li>
+      <li class="list-group-item" routerLinkActive="active" [routerLink]="['/buscarporrol']">Buscar Rol</li>
+      <li class="list-group-item" routerLinkActive="active" [routerLink]="['/crear']">Crear usuario</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h2>Busqueda general de usuarios</h2>
+    <hr>
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<h3>Buscar todos</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of usuarios; let i = index;">
+            <th scope="row"> {{i+1}}</th>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.correo }}</td>
+            <td>{{ item.rol }}</td>
+            <td>{{ estado(item.estado) }}</td>
+            <td><i class="btn btn-outline-primary" (click)="btnEditar(item._id)">EDITAR</i>
+                <i class="btn btn-outline-danger ms-1" (click)="btnEliminar(item._id)">ELIMINAR</i>
+            </td>
+        </tr>
+    </tbody>
+</table>
